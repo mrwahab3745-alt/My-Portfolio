@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wahab Ahmad | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Wahab Ahmad (MR.Developer): frontend developer building fast, accessible, responsive websites with HTML, CSS and JavaScript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="hero" id="top">
+      <!-- decorative sparkles and cubes -->
+      <svg
+        class="spark"
+        style="--s: 20px; --c: #fdb736; left: 3%; top: 4%"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12 6.4-.6 11.4-5.6 12-12z"
+        />
+      </svg>
+      <svg
+        class="spark"
+        style="--s: 14px; --d: 1s; left: 46%; top: 10%"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12 6.4-.6 11.4-5.6 12-12z"
+        />
+      </svg>
+      <svg
+        class="spark"
+        style="--s: 18px; --c: #fdb736; --d: 0.5s; right: 6%; top: 30%"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12 6.4-.6 11.4-5.6 12-12z"
+        />
+      </svg>
+      <svg
+        class="spark"
+        style="--s: 12px; --d: 2s; left: 14%; top: 78%"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12 6.4-.6 11.4-5.6 12-12z"
+        />
+      </svg>
+      <svg
+        class="spark"
+        style="--s: 16px; --d: 1.5s; right: 12%; bottom: 12%"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12 6.4-.6 11.4-5.6 12-12z"
+        />
+      </svg>
+      <div
+        class="cube"
+        style="--s: 30px; --r: 18deg; left: 49%; top: 68%"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="cube"
+        style="--s: 22px; --r: 40deg; --d: 2s; right: 14%; top: 14%"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="cube"
+        style="--s: 36px; --r: 10deg; --d: 1s; right: 3%; bottom: 20%"
+        aria-hidden="true"
+      ></div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="logo" href="#top">Wahab<span>.dev</span></a>
+
+        <!-- Mobile Menu Toggle (CSS Only) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- This button only shows in the mobile dropdown -->
+          <li class="mobile-cta">
+            <a class="btn btn-amber" href="#contact">Hire me</a>
+          </li>
+        </ul>
+
+        <!-- This button only shows on desktop -->
+        <a class="btn btn-amber desktop-cta" href="#contact">Hire me</a>
+      </nav>
+
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="badge"
+              ><i aria-hidden="true"></i>Available for new projects</span
+            >
+            <h1>Wahab <em>Ahmad</em></h1>
+            <p class="sub">
+              Frontend developer crafting fast, polished web interfaces, from
+              semantic HTML to the last pixel.
+            </p>
+            <div class="cta">
+              <a class="btn btn-amber" href="#work"
+                >View my work <span aria-hidden="true">↗</span></a
+              >
+              <a class="btn btn-ghost" href="#contact">Let's talk</a>
+            </div>
+          </div>
+          <div class="globe-wrap">
+            <canvas
+              id="globe"
+              role="img"
+              aria-label="Animated wireframe globe"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="track"></div>
+    </div>
+
+    <main>
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="wrap">
+          <div class="about-grid">
+            <div class="reveal">
+              <span class="label">About</span>
+              <h2>
+                I build for real people,
+                <span class="b">not just for screens.</span>
+              </h2>
+              <p>
+                I'm Wahab, a frontend developer in the making. I'm studying BS
+                Computer Science at the Virtual University of Pakistan and
+                learning web development through NAVTTC's WEBCIT course.
+              </p>
+              <p>
+                I enjoy turning a design into clean, responsive pages with HTML,
+                CSS and JavaScript. I use AI tools to move faster, then read,
+                test and own everything I ship.
+              </p>
+            </div>
+            <figure class="photo-wrap reveal">
+              <span class="ring" aria-hidden="true"></span>
+              <div class="photo">
+                <div class="ph" aria-hidden="true">
+                  <b>WA</b><span>MR.Developer</span>
+                </div>
+                <img
+                  src="photo.jpg"
+                  alt="Portrait of Wahab Ahmad"
+                  onerror="this.remove()"
+                />
+              </div>
+              <figcaption class="chip">
+                <b>Frontend Developer</b><span>HTML · CSS · JavaScript</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="stats reveal">
+            <div class="stat blue"><b>2</b><span>Projects built</span></div>
+            <div class="stat amber">
+              <b>4</b><span>Core skills, solid</span>
+            </div>
+            <div class="stat"><b>2</b><span>Skills I'm learning</span></div>
+            <div class="stat blue">
+              <b>WEBCIT</b><span>NAVTTC programme</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section id="stack" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="stack-grid">
+            <div class="reveal">
+              <span class="label">Stack</span>
+              <h2>Tools I reach for, <mark>spinning</mark> in 3D.</h2>
+              <p>
+                Drag the sphere to explore. I pick technology to fit the
+                problem, and I'm upfront about what I'm still learning.
+              </p>
+              <ul class="facts">
+                <li><b>Frontend:</b> HTML, CSS, JavaScript, Bootstrap</li>
+                <li><b>Learning:</b> React, Tailwind CSS</li>
+                <li><b>Focus:</b> Responsive, accessible UI</li>
+                <li><b>Workflow:</b> AI-assisted, human-reviewed</li>
+              </ul>
+            </div>
+            <div class="cloud reveal" id="cloud" aria-hidden="true"></div>
+            <ul class="sr">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>React (learning)</li>
+              <li>Tailwind CSS (learning)</li>
+              <li>Responsive design</li>
+              <li>Accessibility</li>
+              <li>AI-assisted workflows</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" style="padding-top: 40px">
+        <div class="wrap">
+          <div class="work-head reveal">
+            <span class="label">Selected work</span>
+            <h2>Projects I've built, and what I learned.</h2>
+          </div>
+          <div class="cards">
+            <article class="card blue reveal">
+              <div class="top">
+                <span>01</span><span>Website · Business</span>
+              </div>
+              <h3>Aqua Pure Technology</h3>
+              <p>
+                A parts-catalogue website for an RO plant spare parts business
+                in Pakistan. Catalogue-first, mobile-first, with one clear way
+                to get in touch.
+              </p>
+              <div class="pills">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+               <div class="links-container">
+                <div class="links">
+                  <a
+                    href="https://aqua-pure-technologies.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit site<span class="work-card" aria-hidden="true"
+                      >↗</span
+                    >
+                  </a>
+                </div>
+                <div class="links">
+                  <a
+                    href="https://github.com/mrwahab3745-alt/Aqua-Pure-Technologies"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View code<span class="work-card" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card amber reveal">
+              <div class="top">
+                <span>02</span><span>JavaScript · Coursework</span>
+              </div>
+              <h3>Convertible Clock</h3>
+              <p>
+                Built during the NAVTTC WEBCIT course: an interval-driven render
+                with one format function and a toggle that switches the display.
+              </p>
+              <div class="pills">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="links-container">
+                <div class="links">
+                  <a
+                    href="https://mrwahab3745-alt.github.io/Convertible-Clock/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit site<span class="work-card" aria-hidden="true"
+                      >↗</span
+                    >
+                  </a>
+                </div>
+                <div class="links">
+                  <a
+                    href="https://github.com/mrwahab3745-alt/Convertible-Clock"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View code<span class="work-card" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card navy reveal">
+              <div class="top">
+                <span>03</span><span>React · In progress</span>
+              </div>
+              <h3>React practice project</h3>
+              <p>
+                A React practice build: rebuilding a section of an existing site
+                on my own, toward my first self-authored React project.
+              </p>
+              <div class="pills"><span>React</span><span>Learning</span></div>
+            </article>
+            <article class="card reveal">
+              <div class="top"><span>04</span><span>Your project</span></div>
+              <h3>Have something to build?</h3>
+              <p>I'm open to small, well-scoped websites and freelance work.</p>
+              <a class="more" href="#contact">Tell me about it</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOURNEY -->
+      <section class="journey" id="journey">
+        <div class="wrap">
+          <span class="label">Journey</span>
+          <h2>My journey so far.</h2>
+          <div class="timeline">
+            <div class="step reveal">
+              <small>Now</small>
+              <h3>Learning React &amp; Tailwind CSS</h3>
+              <p>
+                Practising components, props and state, working toward a first
+                self-authored React project.
+              </p>
+            </div>
+            <div class="step reveal">
+              <small>Project</small>
+              <h3>Aqua Pure Technology website</h3>
+              <p>
+                Built a catalogue-style site for an RO plant spare parts
+                business.
+              </p>
+            </div>
+            <div class="step reveal">
+              <small>Course</small>
+              <h3>NAVTTC WEBCIT</h3>
+              <p>
+                Web development training: HTML, CSS, Bootstrap and JavaScript,
+                including the Convertible Clock.
+              </p>
+            </div>
+            <div class="step reveal">
+              <small>Degree</small>
+              <h3>BS Computer Science</h3>
+              <p>
+                Virtual University of Pakistan. Building the foundations behind
+                the front end.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW I WORK -->
+      <section>
+        <div class="wrap">
+          <div class="reveal">
+            <span class="label">How I work</span>
+            <h2>Three promises I keep.</h2>
+          </div>
+          <div class="how">
+            <article class="card reveal">
+              <span class="num">01</span>
+              <h3 style="margin-top: 0; font-size: 22px">Honest about skill</h3>
+              <p>
+                If I'm still learning a tool, I say so. You always know what
+                you're getting.
+              </p>
+            </article>
+            <article class="card blue reveal">
+              <span class="num">02</span>
+              <h3 style="margin-top: 0; font-size: 22px">I own what ships</h3>
+              <p>
+                AI helps me draft and debug. I read, test and understand every
+                line I hand over.
+              </p>
+            </article>
+            <article class="card reveal">
+              <span class="num">03</span>
+              <h3 style="margin-top: 0; font-size: 22px">Built for everyone</h3>
+              <p>
+                Responsive layouts, real labels, keyboard-friendly controls and
+                readable contrast.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="padding-top: 0">
+        <div class="wrap">
+          <div class="contact-card reveal">
+            <div>
+              <h2>Have something to build?</h2>
+              <p>Tell me about your project and I'll get back to you.</p>
+              <div class="socials">
+                <a
+                  href="mailto:mrwahab3745@gmail.com"
+                  id="mailLink"
+                  aria-label="Email"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" /></svg
+                ></a>
+                <a
+                  href="https://github.com/mrwahab3745-alt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    /></svg
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/wahabahmaddev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <form
+              class="form"
+              id="form"
+              action="https://formsubmit.co/mrwahab3745@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New message from your portfolio"
+              />
+              <div>
+                <label for="f-name">Name</label
+                ><input
+                  id="f-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="f-email">Email</label
+                ><input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="f-msg">Message</label
+                ><textarea id="f-msg" name="message" required></textarea>
+              </div>
+              <button class="btn btn-navy" type="submit">Send message</button>
+              <p class="note" id="note" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-content">
+          <a class="logo f-logo" href="#top">Wahab<span>.dev</span></a>
+
+          <ul class="footer-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          © <span id="year">2026</span> Wahab Ahmad. Designed and built with
+          care.
+        </div>
+      </div>
+    </footer>
+
+    <button
+      type="button"
+      class="chat"
+      id="chatBtn"
+      aria-label="Open chat assistant"
+      aria-expanded="false"
+      aria-controls="chatPanel"
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path
+          d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+        />
+      </svg>
+    </button>
+
+    <section
+      class="chat-panel"
+      id="chatPanel"
+      role="dialog"
+      aria-label="Chat with Wahab's assistant"
+    >
+      <div class="chat-head">
+        <div>
+          <b>Wahab's assistant</b
+          ><small><i aria-hidden="true"></i>Ask about Wahab</small>
+        </div>
+        <button
+          type="button"
+          class="chat-x"
+          id="chatClose"
+          aria-label="Close chat"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+      <div class="chips" id="chatChips">
+        <button type="button">Skills</button>
+        <button type="button">Projects</button>
+        <button type="button">Availability</button>
+        <button type="button">Contact</button>
+      </div>
+      <form class="chat-form" id="chatForm">
+        <label class="sr" for="chatInput">Your question</label>
+        <input
+          id="chatInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Ask anything / اردو یا Roman Urdu"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
