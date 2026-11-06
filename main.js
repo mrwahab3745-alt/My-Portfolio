@@ -244,6 +244,56 @@
     if (!reduce) requestAnimationFrame(loop);
   })();
 
+  /* contact form */
+  let form = document.getElementById('form');
+  let note = document.getElementById('note');
+
+  if (form) {
+    let submitButton = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let formData = new FormData(form);
+      let payload = Object.fromEntries(formData.entries());
+      if (note) note.textContent = 'Sending message...';
+      if (submitButton) submitButton.disabled = true;
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (response) {
+          return response.json().then(function (data) {
+            if (!response.ok || !data || data.success !== true) {
+              throw new Error(
+                (data && data.message) || 'The form could not be submitted.'
+              );
+            }
+            return data;
+          });
+        })
+        .then(function () {
+          if (note) note.textContent = 'Message sent successfully! Thanks for reaching out.';
+          form.reset();
+        })
+        .catch(function (error) {
+          console.error('Contact form submission failed:', error);
+          if (note) {
+            note.textContent = error instanceof TypeError
+              ? 'Network error. Please try again later.'
+              : error.message;
+          }
+        })
+        .then(function () {
+          if (submitButton) submitButton.disabled = false;
+        });
+    });
+  }
+
   /* mobile menu auto-close */
   let menuToggle = document.getElementById('menu-toggle');
   document.querySelectorAll('.nav-links a').forEach(function(link) {
