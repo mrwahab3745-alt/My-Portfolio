@@ -268,19 +268,39 @@
         body: JSON.stringify(payload)
       })
         .then(function (response) {
-          if (!response.ok) throw new Error('FormSubmit returned HTTP ' + response.status);
-          return response.json();
+          return response.text().then(function (body) {
+            let data;
+            try {
+              data = body ? JSON.parse(body) : null;
+            } catch (error) {
+              data = null;
+            }
+
+            if (!response.ok) {
+              throw new Error(
+                (data && data.message) ||
+                'FormSubmit returned HTTP ' + response.status + '.'
+              );
+            }
+            return data;
+          });
         })
         .then(function (data) {
           if (!data || (data.success !== true && data.success !== 'true')) {
-            throw new Error(data && data.message ? data.message : 'FormSubmit did not confirm delivery.');
+            throw new Error(
+              (data && data.message) ||
+              'FormSubmit did not confirm the submission. Check that the recipient email has been activated.'
+            );
           }
           note.textContent = 'Message sent successfully! Thanks for reaching out.';
           form.reset();
         })
         .catch(function (error) {
           console.error('Contact form submission failed:', error);
-          note.textContent = 'Your message could not be sent. Please try again or email ' + EMAIL + '.';
+          let reason = error instanceof TypeError
+            ? 'Could not reach FormSubmit. Check your connection, browser extensions, and the browser console.'
+            : error.message;
+          note.textContent = 'Message not sent: ' + reason + ' You can also email ' + EMAIL + '.';
         })
         .then(function () {
           if (submitButton) submitButton.disabled = false;
